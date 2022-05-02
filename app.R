@@ -110,11 +110,11 @@ server <- function(input, output) {
       
       filter(Undergraduate.Major %in% input$majorchoice) %>%
       
-      plot_ly( x = ~Undergraduate.Major , y = ~Mid.Career.10th.Percentile.Salary , type = 'bar', name = '90th Percentile', width = 500) %>% 
-      add_trace(y = ~Mid.Career.25th.Percentile.Salary, name = '75th Percentile') %>% 
+      plot_ly( x = ~Undergraduate.Major , y = ~Mid.Career.10th.Percentile.Salary , type = 'bar', name = '10th Percentile', width = 500) %>% 
+      add_trace(y = ~Mid.Career.25th.Percentile.Salary, name = '25th Percentile') %>% 
       add_trace(y = ~Mid.Career.Median.Salary, name = '50th Percentile') %>%
-      add_trace(y = ~Mid.Career.75th.Percentile.Salary, name = ' 25th Percentile') %>%
-      add_trace(y = ~Mid.Career.90th.Percentile.Salary, name = '10th Percentile') %>%
+      add_trace(y = ~Mid.Career.75th.Percentile.Salary, name = ' 75th Percentile') %>%
+      add_trace(y = ~Mid.Career.90th.Percentile.Salary, name = '90th Percentile') %>%
       
       layout(title = 'Salary Range by Major',
              plot_bgcolor = "#e5ecf6",
